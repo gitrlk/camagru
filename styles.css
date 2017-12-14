@@ -1,0 +1,373 @@
+body
+{
+	background-color: rgb(245, 247, 248);
+	margin: 0 0 0 0;
+}
+.header
+{
+	display : flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	background-color: rgb(78, 99, 110);
+	height: 6vw;
+	max-height: 3.5cm;
+	width: 100%;
+}
+
+.box1
+{
+	display: inline-block;
+	position: relative;
+	width: 15vw;
+	height: 100%;
+}
+
+.main
+{
+	margin: auto;
+	margin-top: 1vw;
+	width: 80%;
+	height: 80%;
+}
+
+#Global #gauche {
+    float:left;
+	margin-left: 5%;
+    width:55%;
+}
+#Global #droite {
+	display: inline-block;
+	overflow: scroll;
+	display: block;
+	height: 85%;
+	margin: 1vw 0 0 0;
+}
+
+.mainreg
+{
+	margin: auto;
+	margin-top: 10vw;
+	padding: 4vw;
+	width: 15%;
+
+}
+.footer
+{
+	position: absolute;
+	bottom: 0;
+	background-color: rgb(78, 99, 110);
+	height: 5vw;
+	max-height: 3.5cm;
+	width: 100%;
+
+}
+
+.title
+{
+	font-family: arial;
+	background-color: rgb(78, 99, 110);
+	border: none;
+	margin: auto;;
+	margin-left: -43.5vw;
+	height: 100%;
+	width: 100%;
+	font-size: 4vw;
+	color: black;
+}
+.title:focus {outline:0;}
+
+.login
+{
+	height: 1.7vw;
+	width: 14.1vw;
+	margin-left: 0.6vw;
+	margin-top: -2vw;
+	border: none;
+}
+.password
+{
+	height: 1.7vw;
+	width: 14.1vw;
+	margin-left: 0.6vw;
+	margin-top: 2vw;
+	border: none;
+}
+
+.button
+{
+	position: relative;
+	float: right;
+	width: 100%;
+	height: 50%;
+	font-size: 2vw;
+	font-family: arial;
+	color: white;
+	background-color: rgb(78, 99, 110);
+	border: none;
+}
+
+.button:hover
+{
+	background-color: rgb(204, 204, 204);
+}
+
+.icon
+{
+	display: inline-block;
+	float: right;
+	width: 100%;
+	height: 100%;
+	font-size: 2vw;
+	font-family: arial;
+	color: white;
+	background-color: rgb(78, 99, 110);
+	border: none;
+}
+
+.icon:focus {outline:0;}
+
+.icon:hover
+{
+	background-color: rgb(204, 204, 204);
+}
+
+#video
+{
+	margin: 1vw 0 0 0;
+	max-width: 40%;
+	height: auto;
+}
+
+.cambutton
+{
+	background-color: rgb(245, 247, 248);
+	margin-top: 0.3vw;
+	border-radius: 7px;
+	display: block;
+	margin-left: 7vw;
+	height: auto;
+	font-size: 2vw;
+	font-family: arial;
+	color: white;
+	border: none;
+	position: relative;
+}
+.cambutton:hover
+{
+	background-color: rgb(204, 204, 204);
+}
+
+.button:active
+{
+	background-color: black;
+}
+
+.button:focus {outline:0;}
+
+
+.registerbutton
+{
+	position: relative;
+	margin-top: 2vw;
+	width: 14.1vw;
+	height: 2vw;
+	margin-left: 0.6vw;
+	background-color: rgb(78, 99, 110);
+	border: none;
+	font-size: 1vw;
+}
+
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.signup
+{
+	border-radius: 7px;
+    background-color: rgb(78, 99, 110);
+    color: LavenderBlush;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 36%;
+}
+
+.signup:focus {outline:0;}
+
+.signup:hover
+{
+	background-color: rgb(204, 204, 204);
+}
+
+.signed
+{
+	position: relative;
+	float: right;
+	width: 100%;
+	height: 50%;
+	font-size: 2vw;
+	font-family: arial;
+	color: white;
+	background-color: rgb(78, 99, 110);
+	border: none;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+
+	.clearfix {
+		content: "";
+		clear: both;
+		display: table;
+		width: 100%;
+	}}
+.cancelbtn,.signupbtn {float:left;width:100%}
+
+
+.container {
+    padding: 16px;
+}
+
+.log_error{
+	color: #f00;
+	 margin-bottom: 20px;
+}
+
+.log_succes{
+	color: rgb(25, 226, 68);
+	 margin-bottom: 20px;
+}
+
+.filters
+{
+		position: absolute;
+	   margin: 2vw 0 0 30vw;
+
+}
+
+.filtersize
+{
+       width: 7vw;
+       height: 7vw;
+}
+
+.gallery
+{
+	border-radius: 1vw;
+	padding: 0.2vw;
+	width: 11vw;
+	height: 10vw;
+	transition: .3s ease;
+	z-index: 1;
+}
+
+.uplod
+{
+	position : absolute;
+	width: 97vw;
+	top: 6.1vw;
+	left: 2vw;
+}
+
+.del
+{
+	margin: 0 0 0vw 0vw;
+	height: 11vw;
+	width: 12vw;
+	display: inline-block;
+}
+
+#container
+{
+	margin: 0 0 1vw 1vw;
+	height: 13vw;
+	width: 14vw;
+	display: inline-block;
+}
+
+.likencomment
+{
+	width: 14vw;
+	top: -8vw;
+	position: relative;
+	height: 2vw;
+	margin: 0 0 0 1vw;
+	z-index: 2;
+}
+
+.delbutton
+{
+	position: relative;
+	top : -7.2vw;
+	opacity: 0;
+	width: 5%;
+	margin-left: 3.8vw;
+	transition: .3s ease;
+	z-index: 2;
+}
+
+.delbutton:hover
+{
+	opacity: 1;
+}
+
+.likebutton
+{
+	position: relative;
+	top : -9.2vw;
+	opacity: 0;
+	width: 5%;
+	margin-left: 3.8vw;
+	transition: .3s ease;
+	z-index: 2;
+}
+
+.likebutton:hover
+{
+	opacity: 1;
+}
+
+.gallery:hover + .likebutton
+{
+	opacity: 1;
+}
+
+.gallery:hover + .delbutton
+{
+	opacity: 1;
+}
+
+.galleryview
+{
+	display: inline-block;
+	height: 85%;
+}
+
+.cambutton {
+	border-radius: 7px;
+	display: block;
+	margin-left: 7vw;
+	height: auto;
+	font-size: 2vw;
+	font-family: arial;
+	color: white;
+	border: none;
+	position: relative;
+}
+
+.settings
+{
+	margin : 0 auto;
+	margin-left: 3vw;
+}
+
+/*#headerusr
+{
+}*/
