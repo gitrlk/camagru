@@ -39,13 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 				$_SESSION['login_success'] = '';
 				$_SESSION['LOGGED_ON'] =	NULL;
 			}
+			$_SESSION['ID'] = $id;
 			try
 			{
 				$conn = new PDO("mysql:host=localhost;dbname=db_camagru", "root", "root");
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-				$req = $conn->prepare("SELECT emailcomment FROM users where username = :username");
+				$req = $conn->prepare("SELECT emailcomment FROM users where id = :id");
 				$req->execute(array(
-					':username' => $_SESSION['LOGGED_ON']
+					':id' => $_SESSION['ID']
 				));
 				$emailcomment = $req->fetch(PDO::FETCH_COLUMN, 0);
 			}
@@ -54,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 				echo "Couldn't get variable : " . $e->getMessage();
 			}
 			$_SESSION['mailcomm'] = $emailcomment;
-			$_SESSION['ID'] = $id;
 			header( "refresh:1;url=index.php");
 		}
 		else
