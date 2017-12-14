@@ -7,10 +7,9 @@
 	{
 		$conn = new PDO("mysql:host=localhost", $DB_USER, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$req = "CREATE DATABASE db_camagru";
+		$req = "CREATE DATABASE IF NOT EXISTS db_camagru";
 		$req = $conn->prepare($req);
 		$req->execute();
-		// header("location:index.php");
 	}
 	catch(PDOException $e)
 	{
@@ -20,7 +19,7 @@
 	{
 		$conn = new PDO("mysql:host=localhost", $DB_USER, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$qry = "CREATE TABLE `db_camagru`.`users` (
+		$qry = "CREATE TABLE IF NOT EXISTS `db_camagru`.`users` (
 			`id` INT NOT NULL AUTO_INCREMENT,
 			`username` VARCHAR(255) NOT NULL,
 			`email` VARCHAR(255) NOT NULL,
@@ -42,7 +41,7 @@
 	{
 		$conn = new PDO("mysql:host=localhost", $DB_USER, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$qry = "CREATE TABLE `db_camagru`.`Photos` (
+		$qry = "CREATE TABLE IF NOT EXISTS `db_camagru`.`Photos` (
 		`PhotoID` INT NOT NULL AUTO_INCREMENT,
 		`UserID` INT NOT NULL,
 		`username` VARCHAR(255) NOT NULL,
@@ -60,7 +59,7 @@
 	{
 		$conn = new PDO("mysql:host=localhost", $DB_USER, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$qry = "CREATE TABLE `db_camagru`.`comments` (
+		$qry = "CREATE TABLE IF NOT EXISTS `db_camagru`.`comments` (
 		`CommentID` INT NOT NULL AUTO_INCREMENT,
 		`photoID` INT NOT NULL,
 		`author` VARCHAR(255) NOT NULL,
@@ -78,7 +77,7 @@
 	{
 		$conn = new PDO("mysql:host=localhost", $DB_USER, $DB_PASSWORD);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$qry = "CREATE TABLE `db_camagru`.`likes` (
+		$qry = "CREATE TABLE IF NOT EXISTS `db_camagru`.`likes` (
 		`LikeID` INT NOT NULL AUTO_INCREMENT,
 		`photoID` INT NOT NULL,
 		`UserID` INT NOT NULL,
