@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                     {
                         try
                         {
-                            $email = $_POST[email];
+                            $email = $_POST['email'];
                             $con = new PDO("mysql:host=localhost;dbname=db_camagru", "root", "root");
 							$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 							$request = $con->prepare("SELECT email FROM users WHERE email = :email;");
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                                     try
                                     {
                                         $conflink = md5( rand(0,1000) );
-                                        $password = hash("sha512", $_POST[password]);
+                                        $password = hash("sha512", $_POST['password']);
                                         $bdd = new PDO("mysql:host=localhost;dbname=db_camagru", "root", "root");
 										$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 										$req = $bdd->prepare('INSERT INTO users (username, password, email, conflink, emailcomment) VALUES (:username, :password, :email, :conflink, :emailcomment)');
