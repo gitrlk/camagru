@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             }
 
             $dataresetstate = $result->fetch();
-            $activated = $dataresetstate[activated];
+            $activated = $dataresetstate['activated'];
             if ($activated == 1)
             {
                 try

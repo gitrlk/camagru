@@ -64,7 +64,7 @@
 		`photoID` INT NOT NULL,
 		`author` VARCHAR(255) NOT NULL,
 		`timet` DATETIME NOT NULL,
-		`text` VARCHAR(255) NOT NULL,
+		`text` TEXT NOT NULL,
 		PRIMARY KEY (`CommentID`));
 			";
 		$conn->exec($qry);
@@ -90,4 +90,11 @@
 		echo "Couldn't create table: " . $e->getMessage();
 	}
 	$conn = null;
+
+	try {
+
+	} catch (Exception $e) {
+
+	}
+
 ?>
