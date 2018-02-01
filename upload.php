@@ -10,7 +10,7 @@ if(isset($_POST["submit"])) {
 
 	$finfo = finfo_open(FILEINFO_MIME_TYPE);
 	$toto = finfo_file($finfo, $_FILES["fileToUpload"]["tmp_name"]);
-	 if ($toto == 'image/gif')
+	 if ($toto == 'image/gif' || $toto == 'image/jpeg' || $toto == 'image/png' || $toto == 'image/png')
 	 {
 		$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 		if ($check === FALSE)
