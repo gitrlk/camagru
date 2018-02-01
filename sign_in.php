@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 				<div class="clearfix" style="text-align: center;">
 				<a href="resetpsw.php"><button class="signup" type="button" name="resetpsw">I forgot my password</button></a>
 
-				<button type="submit" class="signup" name="clickme" style= "margin-left: 2%;margin-top: 2%";>Sign Up</button>
+				<button type="submit" class="signup" name="clickme" style= "margin-left: 2%;margin-top: 2%";>Sign in</button>
 				</div>
 		</div>
 		</form>
