@@ -6,6 +6,7 @@ $_SESSION['message'] = '';
 	<head>
 		<link rel="stylesheet" href="styles.css">
 		<meta charset="utf-8">
+		<link rel="icon" type="image/png" href="./ressources/icons/favicon.png" />
 		<title></title>
 	</head>
 	<body onload="setInterval('scroll();', 250);">
