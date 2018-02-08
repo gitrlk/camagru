@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-if ($_SESSION['LOGGED_ON'])
+if (!isset($_SESSION['LOGGED_ON']) || !$_GET)
+	header('location:index.php');
+
+if ($_SESSION['LOGGED_ON'] && $_GET)
 {
 	if (!file_exists("./pics"))
 		mkdir("./pics");

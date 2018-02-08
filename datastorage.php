@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	if (!isset($_SESSION['LOGGED_ON']) || !$_POST)
+		header('location:index.php');
 
 	if ($_SESSION['LOGGED_ON'])
 	{

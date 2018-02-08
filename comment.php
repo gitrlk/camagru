@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if (!isset($_SESSION['LOGGED_ON']))
+	if (!isset($_SESSION['LOGGED_ON']) || !$_GET)
 		header('location:index.php');
 
 	$pic = $_GET['pic'];

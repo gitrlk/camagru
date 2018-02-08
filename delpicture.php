@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['LOGGED_ON']) || !$_GET)
+	header('location:index.php');
+
 $pic = explode(" ", $_GET['pic']);
 $path = "./pics/";
 if ($_SESSION['ID'] === $pic[0])
@@ -28,6 +31,7 @@ if ($_SESSION['ID'] === $pic[0])
 }
 
 else {
+	header( "refresh:2;url=index.php" );
 	echo "FAKOFF";
 }
 ?>

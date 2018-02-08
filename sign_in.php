@@ -1,11 +1,17 @@
 <?php
 session_start();
-$_SESSION['message'] = '';
-$_SESSION['login_success'] = '';
-$_SESSION['login_err'] = '';
-$_SESSION['ID'] = '';
-$_SESSION['LOGGED_ON'] = NULL;
-$_SESSION['mailcomm'] = '';
+
+if (isset($_SESSION['LOGGED_ON']))
+	header('location:index.php');
+else
+{
+	$_SESSION['message'] = '';
+	$_SESSION['login_success'] = '';
+	$_SESSION['login_err'] = '';
+	$_SESSION['ID'] = '';
+	$_SESSION['LOGGED_ON'] = NULL;
+	$_SESSION['mailcomm'] = '';
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	try

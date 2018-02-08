@@ -39,11 +39,11 @@
 		<div id="headerusr" style="margin-top:2vw;">Hello <?php echo $_SESSION['LOGGED_ON']; ?></div>
 		<div class="settings">
 			<form class="" action="modifusername.php" method="post">
-				<input type="text" name="newname" value="" placeholder="New username" style="width:150px;height:1vw;border-radius:0.5vw;">
+				<input type="text" name="newname" value="" placeholder="New username" style="width:150px;height:1vw;border-radius:0.5vw;" required>
 				<input type="submit" name="submit" value="change username" style="height:2vw;width:120px">
 			</form>
 			<form class="" action="modifemail.php" method="post">
-				<input type="text" name="newmail" value="" placeholder="New email" style="width:150px;height:1vw;border-radius:0.5vw;">
+				<input type="text" name="newmail" value="" placeholder="New email" style="width:150px;height:1vw;border-radius:0.5vw;" required>
 				<input type="submit" name="submit" value="change email" style="height:2vw;width:120px">
 			</form>
 			<form class="" action="index.html" method="post">
