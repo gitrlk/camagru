@@ -155,7 +155,13 @@ if (isset($_SESSION['LOGGED_ON']))
 		{
 			var response = xml.responseText;
 			photo.src = response;
-			console.log(response);
+			let div = document.createElement('div');
+			let img = document.createElement('img');
+			div.setAttribute('class', 'del');
+			img.src = response;
+			img.setAttribute('class', 'gallery');
+			div.append(img)
+			document.getElementById('droite').append(div);
 		}
    }
   startbutton.addEventListener('click', function(ev)

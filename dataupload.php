@@ -44,3 +44,14 @@ if ($_SESSION['LOGGED_ON'] && $_GET)
 }
 
  ?>
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/png" href="./ressources/icons/favicon.png" />
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+</html> -->

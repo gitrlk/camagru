@@ -7,8 +7,8 @@
 			$conn = new PDO("mysql:host=localhost;dbname=db_camagru", "root", "root");
 			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$update = $conn->prepare("SELECT * FROM users WHERE username = :username");
-			$update->bindParam(':username', $_POST['newname']);
-			$update->execute();
+			$update->execute(array(
+				':username' => $_POST['newname']));
 		}
 		catch (Exception $e)
 		{
@@ -22,7 +22,7 @@
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$update = $conn->prepare("UPDATE Photos SET username = :newusername WHERE username = :username");
 				$update->execute(array(
-					':newusername' => $_POST['newname'],
+					':newusername' => htmlspecialchars($_POST['newname']),
 					':username' => $_SESSION['LOGGED_ON']
 				));
 			}
@@ -36,7 +36,7 @@
 				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$update = $conn->prepare("UPDATE users SET username = :newusername WHERE username = :username");
 				$update->execute(array(
-					':newusername' => $_POST['newname'],
+					':newusername' => htmlspecialchars($_POST['newname']),
 					':username' => $_SESSION['LOGGED_ON']
 				));
 			}
@@ -44,7 +44,7 @@
 			{
 				echo "Couldn't update : " . $e->getMessage();
 			}
-			$_SESSION['LOGGED_ON'] = $_POST['newname'];
+			$_SESSION['LOGGED_ON'] = htmlspecialchars($_POST['newname']);
 			header('location:user.php');
 		}
 		else {

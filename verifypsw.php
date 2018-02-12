@@ -39,7 +39,7 @@
         {
             try
             {
-                $password = hash("sha512", $_POST[password]);
+                $password = hash("sha512", $_POST['password']);
                 $con = new PDO("mysql:host=localhost;dbname=db_camagru", "root", "root");
 				$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 				$update = $con->prepare("UPDATE users SET resetpsw = '0', conflink = NULL, password = :password WHERE email = :email AND conflink = :conflink AND activated = '1' AND resetpsw = '1'");

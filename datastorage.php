@@ -3,7 +3,7 @@
 	if (!isset($_SESSION['LOGGED_ON']) || !$_POST)
 		header('location:index.php');
 
-	if ($_SESSION['LOGGED_ON'])
+	if ($_SESSION['LOGGED_ON'] && isset($_POST['filter']) && isset($_POST['data']))
 	{
 		if (!file_exists("./pics"))
 			mkdir("./pics");
@@ -43,4 +43,6 @@
 		}
 		echo $filename;
 	}
+	else
+		header('location:index.php');
 ?>
